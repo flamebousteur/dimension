@@ -6,13 +6,28 @@ this is the same code in multiple linguages.
 this code is a simple code to create multidimensional arrays.
 
 language:
-  - JavaScript
-
-not implemented yet:
-  - C / C++
-  - Rust
-  - PHP
-  - Java
-  - Python
-  - Q#
+  - JavaScript (not tested)
+  - C / C++ (not tested)
+  - PHP (not completed)
+  - Java (not completed)
+  - Python (not completed)
+  - Rust (not started)
+  - Q# (not started)
   - ...
+
+# functions
+getIndex(coordinates)
+
+getCoordinates(index)
+
+get(coordinates)
+
+set(coordinates, value)
+
+getIndexValue(index)
+
+setIndexValue(index, value)
+
+fill(coordinates1, coordinates2, value)
+
+gets(coordinates1, coordinates2)

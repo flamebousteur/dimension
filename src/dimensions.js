@@ -1,13 +1,17 @@
 /**
- * @class Dimensions
+ * @class dimensions
  * @description This class is used to create multidimensional arrays.
  * @author flamebousteur
  * @version 1.0.0
  * @license GPL-3.0-or-later
+ * /!\ This code is not tested yet. /!\
  */
 class dimensions {
+	dim;
+	dataLengh;
+	buffer;
 	/**
-	 * @brief sets the dimensions length
+	 * @brief create multidimensional array
 	 * @constructor
 	 * @param {Array} dim array of numbers each number represents the size of a dimension
 	 * @param {number} dataLenght
@@ -17,8 +21,8 @@ class dimensions {
 	constructor(dim = [], dataLenght = 1) {
 		this.dim = dim;
 		this.dataLenght = dataLenght;
-		this.bufferLength = dim.reduce((a, b) => a * b);
-		this.buffer = new Uint8Array(this.bufferLength * dataLenght);
+        // the lenght of the buffer is the product of all the numbers in the dim array
+		this.buffer = new Uint8Array(dim.reduce((a, b) => a * b) * dataLenght);
 	}
 
 	/**
@@ -115,7 +119,7 @@ class dimensions {
 	 * @param {Array} coordinates2 array of numbers each number represents the coordinate of a dimension
 	 * @returns {Array} array of numbers each number represents the value of a coordinate
 	 */
-	getData(coordinates1, coordinates2) {
+	gets(coordinates1, coordinates2) {
 		let data = [];
 		for (let i = 0; i < coordinates1.length; i++) {
 			for (let j = coordinates1[i]; j <= coordinates2[i]; j++) {
